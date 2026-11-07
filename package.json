@@ -1,0 +1,11 @@
+{
+  "name": "sai-pootharekulu",
+  "version": "1.0.0",
+  "description": "Sai Pootharekulu - Premium Traditional Indian Sweets E-Commerce Platform",
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed"
+  }
+}
+

@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+
+  body {
+    background-color: #041f14;
+    color: #fdfbf7;
+    overflow-x: hidden;
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem); /* 16px - 18px body font */
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Form labels accessibility */
+  label {
+    font-size: 1rem !important; /* 16px */
+    letter-spacing: 0.025em;
+  }
+
+  /* Form inputs accessibility - ensures no mobile zoom and clear legibility */
+  input, select, textarea {
+    font-size: 1rem !important; /* 16px */
+    min-height: 46px;
+  }
+
+  /* Custom gold scrollbar */
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #02130c;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #b89028;
+    border-radius: 4px;
+    border: 2px solid #02130c;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+  }
+}
+
+/* Typography Scale Classes */
+.text-body-responsive {
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem); /* 16px - 18px */
+}
+
+.text-nav-responsive {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); /* 16px - 18px */
+}
+
+.text-product-name {
+  font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.375rem); /* 20px - 22px */
+}
+
+.text-price-responsive {
+  font-size: clamp(1.375rem, 1.25rem + 0.6vw, 1.625rem); /* 22px - 26px */
+}
+
+.text-btn-responsive {
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem); /* 16px - 18px */
+  min-height: 48px;
+}
+
+.text-heading-responsive {
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem); /* 28px - 36px */
+}
+
+/* Custom Metallic & Decorative Utilities */
+.gold-text {
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #aa771c) 1;
+}
+
+.gold-box-border {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.gold-box-border-glow:hover {
+  border-color: rgba(212, 175, 55, 0.9);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.emerald-glass {
+  background: rgba(6, 43, 28, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.traditional-pattern {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.arch-header {
+  border-radius: 40px 40px 0 0;
+}
